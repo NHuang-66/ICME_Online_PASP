@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-08-25T04:32:32.242949+00:00",
+  "status": "LOCKED_TEST_EVALUATION_COMPLETE_NO_TEST_SELECTION",
+  "validation_lock_sha256": "7fa01bb29266c27f7ebfe430ed053734f906d4a101fa031bdf14751943e7721a",
+  "configuration_reselected_after_test": false,
+  "matching": "deterministic maximum-cardinality one-to-one any-positive-overlap",
+  "false_positive_rule": "every unmatched constructed prediction is FP",
+  "event_protocol": {
+    "correction_points": 2,
+    "minimum_points": 48,
+    "merge_hours": 12.0,
+    "max_observation_gap_minutes": 30.0
+  },
+  "legacy_comparator_only": {
+    "false_positive_min_hours": 2.5,
+    "used_by_primary_metric": false
+  },
+  "static_thresholds": {
+    "lstm": 0.8,
+    "cnn_lstm": 0.82,
+    "unet": 0.9,
+    "runet": 0.9,
+    "cnn_lstm_f33_w64": 0.9,
+    "cnn_lstm_f34_w32": 0.74,
+    "cnn_lstm_f34_w64": 0.82,
+    "cnn_lstm_f34_w128": 0.86
+  },
+  "saocp": {
+    "coverage": 0.95,
+    "lifetime": 16,
+    "policy": "positive_singleton",
+    "block_size": 64,
+    "selection_source": "validation lock only"
+  },
+  "test_results_used_for_selection": false,
+  "matching_cardinality_independently_cross_checked_on_every_evaluation": true,
+  "all_one_regression_passed": true
+}

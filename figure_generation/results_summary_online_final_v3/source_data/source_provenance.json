@@ -1,0 +1,10 @@
+{
+  "input_metric_csv": "source_data/one_to_one_metrics_long.csv",
+  "input_metric_csv_sha256": "fd591d63718feb84e73a1a8a6e96609149cc60481baac71a506a51ceb04872ba",
+  "input_manifest": "source_data/one_to_one_audit_manifest.json",
+  "input_manifest_sha256": "9b382c535fd9f857d11eb1e1de930049205c3ca54fc390d5b842f1837d5e83a5",
+  "validation_lock": "source_data/VALIDATION_SELECTION_COMPLETE.json",
+  "validation_lock_sha256": "7fa01bb29266c27f7ebfe430ed053734f906d4a101fa031bdf14751943e7721a",
+  "presentation_only": true,
+  "value_transformation": "none; P/R/F1 checked from integer TP/FP/FN"
+}

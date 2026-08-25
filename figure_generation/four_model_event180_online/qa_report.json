@@ -1,0 +1,60 @@
+{
+  "figure_contract": {
+    "core_conclusion": "For a transparently selected isolated catalog event, Online calibration changes only the decision threshold; accompanying test P/R/F1 use one-to-one event assignment.",
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib only",
+    "final_size_mm": [
+      183.0,
+      145.0
+    ],
+    "raster_dpi": 600
+  },
+  "locked_case": {
+    "catalog_event_id": 180,
+    "catalog_begin_utc": "2014-06-29T20:46:00",
+    "catalog_end_utc": "2014-06-30T11:16:00",
+    "display_begin_utc": "2014-06-29T08:46:00",
+    "display_end_utc": "2014-06-30T23:16:00"
+  },
+  "data_checks": {
+    "models": [
+      "lstm",
+      "cnn_lstm",
+      "unet",
+      "runet"
+    ],
+    "rows_per_model": {
+      "lstm": 1351,
+      "cnn_lstm": 1351,
+      "unet": 1351,
+      "runet": 1351
+    },
+    "identical_time_index": true,
+    "all_probabilities_and_thresholds_in_0_1": true,
+    "no_value_transformation_or_smoothing": true
+  },
+  "evaluation_contract": {
+    "matching": "maximum-cardinality one-to-one over positive-duration overlap edges",
+    "reuse_prevented": "each prediction and catalog event can contribute to at most one TP",
+    "metric_annotation_scope": "full locked test set, not the displayed case alone"
+  },
+  "display_selection_disclosure": "post hoc display selection using the prespecified high-contrast rule after test results were locked; not used for parameter selection or global metrics",
+  "export_checks": {
+    "png_pixels": [
+      4322,
+      3425
+    ],
+    "tiff_pixels": [
+      4322,
+      3425
+    ],
+    "expected_600dpi_pixels": [
+      4322,
+      3425
+    ],
+    "raster_dimensions_match": true,
+    "svg_contains_editable_text": true,
+    "pdf_true_type_text_requested": true
+  },
+  "manual_visual_qa_required": true
+}

@@ -1,0 +1,5 @@
+﻿run,threshold
+cnn_lstm,0.82
+lstm,0.8
+runet,0.9
+unet,0.9

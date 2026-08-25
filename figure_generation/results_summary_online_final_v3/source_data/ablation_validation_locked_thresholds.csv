@@ -1,0 +1,5 @@
+﻿run,threshold
+cnn_lstm_f33_w64,0.9
+cnn_lstm_f34_w128,0.86
+cnn_lstm_f34_w32,0.74
+cnn_lstm_f34_w64,0.82

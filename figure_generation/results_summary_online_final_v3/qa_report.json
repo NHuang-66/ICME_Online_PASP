@@ -1,0 +1,53 @@
+{
+  "matching_contract": "maximum-cardinality one-to-one matching over positive-duration overlap edges",
+  "interpretation": "each prediction and each catalog event participates in at most one TP",
+  "fp_convention": "every_unmatched_constructed_event_is_fp",
+  "split": "locked_test",
+  "render_backend": "Python/matplotlib only",
+  "no_training_or_threshold_selection": true,
+  "exports": {
+    "backbone": {
+      "size_mm": [
+        183.0,
+        109.0
+      ],
+      "raster_dpi": 600,
+      "expected_pixels": [
+        4322,
+        2574
+      ],
+      "png_pixels": [
+        4322,
+        2574
+      ],
+      "tiff_pixels": [
+        4322,
+        2574
+      ],
+      "raster_dimensions_match": true,
+      "svg_contains_editable_text": true
+    },
+    "ablation": {
+      "size_mm": [
+        183.0,
+        115.0
+      ],
+      "raster_dpi": 600,
+      "expected_pixels": [
+        4322,
+        2716
+      ],
+      "png_pixels": [
+        4322,
+        2716
+      ],
+      "tiff_pixels": [
+        4322,
+        2716
+      ],
+      "raster_dimensions_match": true,
+      "svg_contains_editable_text": true
+    }
+  },
+  "manual_visual_qa_required": true
+}
