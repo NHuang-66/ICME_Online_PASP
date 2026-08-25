@@ -1,0 +1,68 @@
+{
+  "status": "validation_locked_one_to_one_test_evaluated_without_reselection",
+  "reporting_terminology": {
+    "comparison_labels": ["Static", "Online"],
+    "online_definition": "sequential decision-threshold calibration with a frozen probability backbone",
+    "implementation_id": "saocp",
+    "implementation_description": "study-specific SAOCP-inspired blockwise quantile-expert mixture",
+    "upstream_reference_implementation_included": false
+  },
+  "training_family": {
+    "principal_backbones": "binary_crossentropy",
+    "cnn_lstm_input_and_window_ablations": "binary_crossentropy",
+    "shared_baseline": "cnn_lstm_f34_w64 is the same checkpoint and probability stream as cnn_lstm"
+  },
+  "primary_metric": {
+    "matching": "deterministic maximum-cardinality one-to-one",
+    "candidate_edge": "positive-duration temporal overlap",
+    "tp": "number of matched pairs",
+    "fp": "all unmatched constructed predictions",
+    "fn": "all unmatched catalog events",
+    "iog_or_iou_cutoff": null
+  },
+  "event_constructor": {
+    "correction_points": 2,
+    "minimum_points_strictly_greater_than": 48,
+    "merge_gap_hours_strictly_less_than": 12.0,
+    "max_observation_gap_minutes": 30.0
+  },
+  "static_threshold_selection": {
+    "split": "validation_only",
+    "grid_start": 0.10,
+    "grid_end": 0.90,
+    "grid_step": 0.02,
+    "tie_break_order": [
+      "event F1",
+      "event precision",
+      "event recall",
+      "distance to 0.5",
+      "larger threshold"
+    ],
+    "test_used_for_selection": false
+  },
+  "saocp_selection": {
+    "split": "four BCE validation streams after 128-block warm-up",
+    "coverage_grid": [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95],
+    "lifetime_grid": [4, 8, 16, 32],
+    "tie_break_order": [
+      "macro event F1",
+      "minimum backbone event F1",
+      "macro event precision",
+      "macro event recall",
+      "lexicographically smallest candidate id"
+    ],
+    "selected_coverage": 0.95,
+    "selected_lifetime": 16,
+    "policy": "positive_singleton",
+    "block_size": 64,
+    "applied_unchanged_to_pm_window_ablations": true,
+    "test_used_for_selection": false,
+    "feedback_order": "predict complete block, reveal block labels, update next-block state"
+  },
+  "legacy_comparator_only": {
+    "many_to_many_matching": true,
+    "false_positive_min_hours": 2.5,
+    "used_by_primary_metric": false,
+    "used_by_primary_results": false
+  }
+}

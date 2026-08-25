@@ -1,0 +1,14 @@
+Copyright (c) 2026 the manuscript authors.
+All rights reserved.
+
+This code package is supplied for manuscript review and reproducibility audit.
+No permission is granted to copy, modify, redistribute, sublicense, or sell the
+code except where required by the receiving journal's confidential peer-review
+process or by applicable law.
+
+This notice applies only to original code in this package.  Third-party Python
+dependencies and excluded upstream materials remain under their own licenses.
+
+Before public archival, the authors should replace this review-only notice with
+an appropriate open-source license if they intend to permit public reuse, after
+confirming the rights status of code inherited from earlier team work.

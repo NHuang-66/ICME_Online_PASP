@@ -1,0 +1,18 @@
+{
+  "model": "cnn_lstm",
+  "window": 32,
+  "feature_num": 34,
+  "seed": 42,
+  "epochs_requested": 30,
+  "steps_per_epoch": 200,
+  "batch_size": 16,
+  "validation_batch_size": 32,
+  "positive_ratio": 0.7,
+  "optimizer": "Adam",
+  "learning_rate": 0.0001,
+  "loss": "binary cross-entropy",
+  "comparison_scope": "controlled auxiliary benchmark",
+  "trainable_parameters": 606145,
+  "tensorflow_version": "2.20.0",
+  "numpy_version": "2.3.3"
+}

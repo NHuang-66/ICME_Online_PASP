@@ -1,0 +1,3 @@
+case,truth_events,predicted_events,tp,fp,fn,precision,recall,f1,assert_tp_not_greater_than_predictions,passed
+all_one_labels_after_gap_aware_constructor,230,143,77,66,153,0.5384615384615384,0.3347826086956522,0.41286863270777485,True,True
+single_prediction_spanning_test_interval,230,1,1,0,229,1.0,0.004347826086956522,0.008658008658008658,True,True
